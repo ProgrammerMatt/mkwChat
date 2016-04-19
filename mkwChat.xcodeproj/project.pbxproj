@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38944E1E1CC5B29300756EA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38944E1D1CC5B29300756EA4 /* AppDelegate.swift */; };
+		38944E201CC5B29300756EA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38944E1F1CC5B29300756EA4 /* Assets.xcassets */; };
+		38944E231CC5B29300756EA4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38944E211CC5B29300756EA4 /* MainMenu.xib */; };
+		38944E2E1CC5B29400756EA4 /* mkwChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38944E2D1CC5B29400756EA4 /* mkwChatTests.swift */; };
+		38944E391CC5B29400756EA4 /* mkwChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38944E381CC5B29400756EA4 /* mkwChatUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38944E2A1CC5B29400756EA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38944E121CC5B29300756EA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38944E191CC5B29300756EA4;
+			remoteInfo = mkwChat;
+		};
+		38944E351CC5B29400756EA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38944E121CC5B29300756EA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38944E191CC5B29300756EA4;
+			remoteInfo = mkwChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38944E1A1CC5B29300756EA4 /* mkwChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mkwChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38944E1D1CC5B29300756EA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38944E1F1CC5B29300756EA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38944E221CC5B29300756EA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		38944E241CC5B29300756EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38944E291CC5B29400756EA4 /* mkwChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mkwChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38944E2D1CC5B29400756EA4 /* mkwChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mkwChatTests.swift; sourceTree = "<group>"; };
+		38944E2F1CC5B29400756EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38944E341CC5B29400756EA4 /* mkwChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mkwChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38944E381CC5B29400756EA4 /* mkwChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mkwChatUITests.swift; sourceTree = "<group>"; };
+		38944E3A1CC5B29400756EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38944E171CC5B29300756EA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38944E261CC5B29400756EA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38944E311CC5B29400756EA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38944E111CC5B29300756EA4 = {
+			isa = PBXGroup;
+			children = (
+				38944E1C1CC5B29300756EA4 /* mkwChat */,
+				38944E2C1CC5B29400756EA4 /* mkwChatTests */,
+				38944E371CC5B29400756EA4 /* mkwChatUITests */,
+				38944E1B1CC5B29300756EA4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38944E1B1CC5B29300756EA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38944E1A1CC5B29300756EA4 /* mkwChat.app */,
+				38944E291CC5B29400756EA4 /* mkwChatTests.xctest */,
+				38944E341CC5B29400756EA4 /* mkwChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38944E1C1CC5B29300756EA4 /* mkwChat */ = {
+			isa = PBXGroup;
+			children = (
+				38944E1D1CC5B29300756EA4 /* AppDelegate.swift */,
+				38944E1F1CC5B29300756EA4 /* Assets.xcassets */,
+				38944E211CC5B29300756EA4 /* MainMenu.xib */,
+				38944E241CC5B29300756EA4 /* Info.plist */,
+			);
+			path = mkwChat;
+			sourceTree = "<group>";
+		};
+		38944E2C1CC5B29400756EA4 /* mkwChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				38944E2D1CC5B29400756EA4 /* mkwChatTests.swift */,
+				38944E2F1CC5B29400756EA4 /* Info.plist */,
+			);
+			path = mkwChatTests;
+			sourceTree = "<group>";
+		};
+		38944E371CC5B29400756EA4 /* mkwChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				38944E381CC5B29400756EA4 /* mkwChatUITests.swift */,
+				38944E3A1CC5B29400756EA4 /* Info.plist */,
+			);
+			path = mkwChatUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38944E191CC5B29300756EA4 /* mkwChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38944E3D1CC5B29400756EA4 /* Build configuration list for PBXNativeTarget "mkwChat" */;
+			buildPhases = (
+				38944E161CC5B29300756EA4 /* Sources */,
+				38944E171CC5B29300756EA4 /* Frameworks */,
+				38944E181CC5B29300756EA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mkwChat;
+			productName = mkwChat;
+			productReference = 38944E1A1CC5B29300756EA4 /* mkwChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38944E281CC5B29400756EA4 /* mkwChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38944E401CC5B29400756EA4 /* Build configuration list for PBXNativeTarget "mkwChatTests" */;
+			buildPhases = (
+				38944E251CC5B29400756EA4 /* Sources */,
+				38944E261CC5B29400756EA4 /* Frameworks */,
+				38944E271CC5B29400756EA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38944E2B1CC5B29400756EA4 /* PBXTargetDependency */,
+			);
+			name = mkwChatTests;
+			productName = mkwChatTests;
+			productReference = 38944E291CC5B29400756EA4 /* mkwChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		38944E331CC5B29400756EA4 /* mkwChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38944E431CC5B29400756EA4 /* Build configuration list for PBXNativeTarget "mkwChatUITests" */;
+			buildPhases = (
+				38944E301CC5B29400756EA4 /* Sources */,
+				38944E311CC5B29400756EA4 /* Frameworks */,
+				38944E321CC5B29400756EA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38944E361CC5B29400756EA4 /* PBXTargetDependency */,
+			);
+			name = mkwChatUITests;
+			productName = mkwChatUITests;
+			productReference = 38944E341CC5B29400756EA4 /* mkwChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38944E121CC5B29300756EA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Matt Wilfert";
+				TargetAttributes = {
+					38944E191CC5B29300756EA4 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					38944E281CC5B29400756EA4 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 38944E191CC5B29300756EA4;
+					};
+					38944E331CC5B29400756EA4 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 38944E191CC5B29300756EA4;
+					};
+				};
+			};
+			buildConfigurationList = 38944E151CC5B29300756EA4 /* Build configuration list for PBXProject "mkwChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38944E111CC5B29300756EA4;
+			productRefGroup = 38944E1B1CC5B29300756EA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38944E191CC5B29300756EA4 /* mkwChat */,
+				38944E281CC5B29400756EA4 /* mkwChatTests */,
+				38944E331CC5B29400756EA4 /* mkwChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38944E181CC5B29300756EA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38944E201CC5B29300756EA4 /* Assets.xcassets in Resources */,
+				38944E231CC5B29300756EA4 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38944E271CC5B29400756EA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38944E321CC5B29400756EA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38944E161CC5B29300756EA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38944E1E1CC5B29300756EA4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38944E251CC5B29400756EA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38944E2E1CC5B29400756EA4 /* mkwChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38944E301CC5B29400756EA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38944E391CC5B29400756EA4 /* mkwChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38944E2B1CC5B29400756EA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38944E191CC5B29300756EA4 /* mkwChat */;
+			targetProxy = 38944E2A1CC5B29400756EA4 /* PBXContainerItemProxy */;
+		};
+		38944E361CC5B29400756EA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38944E191CC5B29300756EA4 /* mkwChat */;
+			targetProxy = 38944E351CC5B29400756EA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38944E211CC5B29300756EA4 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38944E221CC5B29300756EA4 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38944E3B1CC5B29400756EA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		38944E3C1CC5B29400756EA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		38944E3E1CC5B29400756EA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = mkwChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wilfert2.swiftdevs.mkwChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		38944E3F1CC5B29400756EA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = mkwChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wilfert2.swiftdevs.mkwChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		38944E411CC5B29400756EA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = mkwChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wilfert2.swiftdevs.mkwChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mkwChat.app/Contents/MacOS/mkwChat";
+			};
+			name = Debug;
+		};
+		38944E421CC5B29400756EA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = mkwChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wilfert2.swiftdevs.mkwChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mkwChat.app/Contents/MacOS/mkwChat";
+			};
+			name = Release;
+		};
+		38944E441CC5B29400756EA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = mkwChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wilfert2.swiftdevs.mkwChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = mkwChat;
+			};
+			name = Debug;
+		};
+		38944E451CC5B29400756EA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = mkwChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wilfert2.swiftdevs.mkwChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = mkwChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38944E151CC5B29300756EA4 /* Build configuration list for PBXProject "mkwChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38944E3B1CC5B29400756EA4 /* Debug */,
+				38944E3C1CC5B29400756EA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38944E3D1CC5B29400756EA4 /* Build configuration list for PBXNativeTarget "mkwChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38944E3E1CC5B29400756EA4 /* Debug */,
+				38944E3F1CC5B29400756EA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38944E401CC5B29400756EA4 /* Build configuration list for PBXNativeTarget "mkwChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38944E411CC5B29400756EA4 /* Debug */,
+				38944E421CC5B29400756EA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38944E431CC5B29400756EA4 /* Build configuration list for PBXNativeTarget "mkwChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38944E441CC5B29400756EA4 /* Debug */,
+				38944E451CC5B29400756EA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38944E121CC5B29300756EA4 /* Project object */;
+}
