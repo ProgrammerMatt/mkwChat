@@ -18,7 +18,9 @@
                 <outlet property="acceptButton" destination="KdZ-6J-7jl" id="9VD-zf-6LH"/>
                 <outlet property="contactLabel" destination="ihV-Rg-sLS" id="FUI-J8-JcX"/>
                 <outlet property="encryptionSelection" destination="t1o-8l-pzf" id="eLV-Co-fAS"/>
+                <outlet property="enterKeyLabel" destination="DTn-Hs-bRX" id="UAh-9j-8Ic"/>
                 <outlet property="ipaddress" destination="SlV-nG-fzP" id="zJk-Rd-hyl"/>
+                <outlet property="keyField" destination="EXw-C0-row" id="Swf-fe-Bfq"/>
                 <outlet property="label1" destination="hca-kb-wyL" id="zLf-va-G5e"/>
                 <outlet property="status" destination="Vex-v1-mhi" id="29A-Ay-8f3"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
@@ -692,7 +694,7 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eV1-2N-0DP">
-                        <rect key="frame" x="194" y="163" width="92" height="32"/>
+                        <rect key="frame" x="194" y="114" width="92" height="32"/>
                         <buttonCell key="cell" type="push" title="Connect" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yMh-l0-2hG">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -747,8 +749,8 @@
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1o-8l-pzf">
-                        <rect key="frame" x="397" y="197" width="65" height="18"/>
-                        <buttonCell key="cell" type="radio" title="SHA32" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="l90-cO-FEs">
+                        <rect key="frame" x="397" y="197" width="69" height="18"/>
+                        <buttonCell key="cell" type="radio" title="Base64" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="l90-cO-FEs">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -766,6 +768,22 @@
                             <action selector="chooseEncryption:" target="Voe-Tx-rLC" id="ocG-x2-Rp7"/>
                         </connections>
                     </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DTn-Hs-bRX">
+                        <rect key="frame" x="172" y="153" width="65" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enter key:" id="KA0-wY-mvX">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EXw-C0-row">
+                        <rect key="frame" x="238" y="150" width="96" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="4Dq-fx-weg">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
             <point key="canvasLocation" x="350" y="268"/>

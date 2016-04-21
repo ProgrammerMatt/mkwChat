@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CryptoSwift
+
 
 public class Encryption{
 
@@ -22,8 +24,27 @@ public class Encryption{
             return caesarCypher(message, key: key)
         }
         
-        if option == "SHA256"{
-            return SHA256(message, key: key)
+        if option == "Base64"{
+            return Base64(message, key: key)
+        }
+        
+        return "null"
+        
+    }
+    
+    func decrypt(message: String, key: String, option: String) -> String{
+        
+        
+        if option == "Clear text"{
+            return message
+        }
+        
+        if option == "Caesar Cypher" {
+            return caesarCypherDecrypt(message, key: key)
+        }
+        
+        if option == "Base64"{
+            return Base64Decrypt(message, key: key)
         }
         
         return "null"
@@ -89,9 +110,33 @@ public class Encryption{
         
     }
     
-    func SHA256(message: String, key: String) -> String {
+    func Base64(message: String, key: String) -> String {
         
-        return "needtodo"
+        var temp = key
+
+        
+        while temp.characters.count < 32{
+            temp += "0"
+        }
+        
+        let base64String = try! message.encrypt(AES(key: temp, iv: "0123456789012345")).toBase64()
+        
+        return base64String!
+        
+    }
+    
+    func Base64Decrypt(message: String, key: String) -> String {
+        
+        var temp = key
+        
+        while temp.characters.count < 32{
+            temp += "0"
+        }
+        
+        let decrypted = try! message.decryptBase64ToString(AES(key: temp, iv: "0123456789012345"))
+        
+        return decrypted
+        
     }
     
 }

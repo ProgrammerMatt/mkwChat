@@ -1,5 +1,6 @@
 import Cocoa
 import Foundation
+import CryptoSwift
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -18,8 +19,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var s:sockaddr_in?
     let Encryptor = Encryption()
     var encryptionMethod:String?
+    var key:String?
+    var keyFlag:Bool?
+    
     
 
+    @IBOutlet weak var keyField: NSTextField!
+    @IBOutlet weak var enterKeyLabel: NSTextField!
     
 
     
@@ -27,6 +33,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         acceptButton.hidden = true
         contactLabel.hidden = true
+        keyField.hidden = true
+        enterKeyLabel.hidden = true
         //self.Encryptor = Encryption()
         
         self.myAddress = getIFAddresses()[0]
@@ -56,6 +64,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     
     @IBAction func connectAction(sender: AnyObject) {
+        
+        if self.keyFlag == true && self.key == nil{
+            let answer = dialogOKCancel("Error", text: "You must write a key.")
+            return
+        }
         
         if self.encryptionMethod == nil{
             
@@ -174,6 +187,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func chooseEncryption(sender: NSButton) {
         self.encryptionMethod = sender.title
+        
+        if sender.title != "Clear text"{
+            keyField.hidden = false
+            enterKeyLabel.hidden = false
+            self.keyFlag = true
+            enterKeyLabel.
+        }else{
+            keyField.hidden = true
+            enterKeyLabel.hidden = true
+            self.keyFlag = false
+            self.key = nil
+        }
     }
 
     
