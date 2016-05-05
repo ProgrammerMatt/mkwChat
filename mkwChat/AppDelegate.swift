@@ -7,7 +7,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var label1: NSTextField!
-    @IBOutlet weak var ipaddress: NSTextField!
     @IBOutlet weak var status: NSTextField!
     @IBOutlet weak var acceptButton: NSButton!
     @IBOutlet weak var contactLabel: NSTextField!
@@ -24,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     
 
+    @IBOutlet weak var ipaddress: NSTextField!
     @IBOutlet weak var keyField: NSTextField!
     @IBOutlet weak var enterKeyLabel: NSTextField!
     
@@ -40,7 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.myAddress = getIFAddresses()[0]
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            var server:TCPServer = TCPServer(addr: self.myAddress!, port: 8080)
+            var server:TCPServer = TCPServer(addr: self.myAddress!, port: 8081)
             var (success, msg) = server.listen()
             //print(success)
             if success {
@@ -65,7 +65,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func connectAction(sender: AnyObject) {
         
-        if self.keyFlag == true && self.key == nil{
+        self.key = keyField.stringValue
+        
+        if self.keyFlag == true && self.key == ""{
             let answer = dialogOKCancel("Error", text: "You must write a key.")
             return
         }
@@ -89,7 +91,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 print("Answer to ring,ring is: \(count) bytes: \(block)")
             }
             .connect(s!) { socket in
-                socket.write("Connecting")
+                socket.write(self.encryptionMethod!)
         }
     }
     
@@ -102,15 +104,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         if(self.s == nil){
-            self.friend = ipaddress.stringValue
             self.s = sockaddr_in(string: self.friend! + ":8080")
         }
         
-        dispatch_async(dispatch_get_main_queue()){
-            self.acceptButton.hidden = false
-            self.contactLabel.hidden = false
-            self.contactLabel.stringValue = self.friend!+" wants to chat with you using the " + self.encryptionMethod!
-        }
+
 
         var d = c.read(1024*10)
         var s = ""
@@ -124,18 +121,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 self.chatWindowController?.showWindow(self)
                 print(s+":here")
                 }
+            }else if s == "Clear text" || s == "Caesar Cypher" || s == "Base64"{
+                self.friend = c.addr
+                self.encryptionMethod = s
+                keyField.hidden = false
+                enterKeyLabel.hidden = false
+                dispatch_async(dispatch_get_main_queue()){
+                    self.acceptButton.hidden = false
+                    self.contactLabel.hidden = false
+                    self.contactLabel.stringValue = self.friend!+" wants to chat with you using the " + self.encryptionMethod!
+                }
             }
-        print(s)
-        chatWindowController?.append("Friend: "+s)
+            
+            chatWindowController?.append("Friend: "+Encryptor.decrypt(s, key: self.key!, option: self.encryptionMethod!))
         c.send(data: d!)
         c.close()
         }
     }
     
     @IBAction func acceptAction(sender: AnyObject) {
-        print("accepting")
-        chatWindowController = ChatWindowController(windowNibName:"ChatWindowController")
-        chatWindowController?.showWindow(self)
+        
+        self.key = keyField.stringValue
+        
+        if self.key == ""{
+            let answer = dialogOKCancel("Error", text: "You must write a key.")
+            return
+        }
+
         
         let socket = ActiveSocket<sockaddr_in>()!
             .onRead { sock, _ in
@@ -149,6 +161,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             .connect(self.s!) { socket in
                 socket.write("Accepted")
         }
+        
+        print("accepting:"+self.friend!)
+        chatWindowController = ChatWindowController(windowNibName:"ChatWindowController")
+        chatWindowController?.showWindow(self)
     }
     
     func getIFAddresses() -> [String] {
@@ -192,12 +208,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             keyField.hidden = false
             enterKeyLabel.hidden = false
             self.keyFlag = true
-            enterKeyLabel.
         }else{
             keyField.hidden = true
             enterKeyLabel.hidden = true
             self.keyFlag = false
             self.key = nil
+            self.keyField.stringValue = ""
         }
     }
 

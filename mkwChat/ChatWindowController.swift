@@ -36,6 +36,8 @@ class ChatWindowController: NSWindowController {
     
     @IBAction func sendMessageAction(sender: AnyObject) {
         
+        //print(self.sendMessage.stringValue)
+        //print(self.appDelegate.encryptionMethod!)
         
         let socket = ActiveSocket<sockaddr_in>()!
             .onRead { sock, _ in
@@ -47,8 +49,7 @@ class ChatWindowController: NSWindowController {
                 print("Answer to ring,ring is: \(count) bytes: \(block)")
             }
             .connect(appDelegate.s!) { socket in
-                socket.write(self.appDelegate.Encryptor.encrypt(self.sendMessage.stringValue, key: "E", option: self.appDelegate.encryptionMethod!)
-)
+                socket.write(self.appDelegate.Encryptor.encrypt(self.sendMessage.stringValue, key: self.appDelegate.key!, option: self.appDelegate.encryptionMethod!))
         }
         
         chatText.stringValue += "Me: "+sendMessage.stringValue + "\n"
